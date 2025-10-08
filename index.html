@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Exemplo TDD</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mocha/mocha.min.css">
+
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            #instructions { margin-bottom: 20px; }
+        </style>
+    </head>
+    <body>
+        <h1>Função somarNumeros</h1>
+
+        <div id="mocha"></div>
+
+        <!-- Bibliotecas -->
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mocha/mocha.min.js"></script>
+        <script src="https://unpkg.com/chai@4.3.4/chai.js"></script>
+
+        <script>
+            mocha.setup('bdd');
+            const expect = chai.expect;
+        </script>
+
+        <script src="app.js"></script>
+        <script src="teste.js"></script>
+
+        <script>
+            mocha.run();
+        </script>
+    </body>
+</html>
